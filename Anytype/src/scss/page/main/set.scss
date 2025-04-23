@@ -1,0 +1,5 @@
+@import "~scss/_mixins";
+
+.pageMainSet {
+	.editorWrapper > #loader { position: fixed; top: 0px; width: 100%; height: 100%; }
+}
