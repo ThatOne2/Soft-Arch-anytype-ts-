@@ -1,0 +1,44 @@
+@startuml
+interface State {
+    +isLoading: boolean
+}
+namespace __global {
+    namespace JSX {
+        interface IntrinsicElements {
+            +em-emoji: any
+        }
+    }
+}
+namespace __global {
+    namespace JSX {
+        interface IntrinsicElements {
+            +em-emoji: any
+        }
+    }
+}
+class RoutePage extends unknown {
+    +render(): any
+    +componentDidMount(): void
+}
+class App extends unknown {
+    +state: { isLoading: boolean; }
+    +node: any
+    +timeoutMaximize: number
+    +render(): any
+    +componentDidMount(): void
+    +init(): void
+    +registerIpcEvents(): void
+    +onInit(e: any, data: any): void
+    +onWillCloseWindow(e: any, windowId: string): void
+    +onPopup(e: any, id: string, param: any, close?: boolean): void
+    +onUpdateCheck(e: any, auto: boolean): void
+    +onUpdateConfirm(e: any, auto: boolean, info: any): void
+    +onUpdateAvailable(e: any, auto: boolean, info: any): void
+    +onUpdateUnavailable(e: any, auto: boolean): void
+    +onUpdateError(e: any, err: string, auto: boolean): void
+    +onUpdateProgress(e: any, progress: any): void
+    +checkUpdateVersion(v: string): void
+    +onRoute(route: string): void
+    +onSpellcheck(e: any, misspelledWord: string, dictionarySuggestions: string[], x: number, y: number, rect: any): void
+}
+@enduml
