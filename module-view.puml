@@ -1,0 +1,87 @@
+@startuml moduleview
+
+namespace src {
+    namespace ts {
+        interface State {
+            +isLoading: boolean
+        }
+        
+        class RoutePage extends ReactComponentRouteComponentProps {
+            +render(): any
+            +componentDidMount(): void
+        }
+
+        class App extends ReactComponentobjectAndState {
+            +state: { isLoading: boolean; }
+            +node: any
+            +timeoutMaximize: number
+            +render(): any
+            +componentDidMount(): void
+            +init(): void
+            +registerIpcEvents(): void
+            +onInit(e: any, data: any): void
+            +onWillCloseWindow(e: any, windowId: string): void
+            +onPopup(e: any, id: string, param: any, close?: boolean): void
+            +onUpdateCheck(e: any, auto: boolean): void
+            +onUpdateConfirm(e: any, auto: boolean, info: any): void
+            +onUpdateAvailable(e: any, auto: boolean, info: any): void
+            +onUpdateUnavailable(e: any, auto: boolean): void
+            +onUpdateError(e: any, err: string, auto: boolean): void
+            +onUpdateProgress(e: any, progress: any): void
+            +checkUpdateVersion(v: string): void
+            +onRoute(route: string): void
+            +onSpellcheck(e: any, misspelledWord: string, dictionarySuggestions: string[], x: number, y: number, rect: any): void
+        }
+
+        class Entry {}
+
+        component <- App : Uses
+        lib <- App: Uses
+        
+        App *-- State : Creates and uses
+        App -> RoutePage
+        
+
+        namespace component {
+
+        }
+
+        namespace docs {
+
+        }
+
+        namespace hook {
+
+        }
+
+        namespace lib {
+
+        }
+
+        namespace store {
+
+        }
+        App <- Entry : Starts render
+    }
+
+    namespace img {
+
+    }
+
+    namespace json {
+
+    }
+
+    namespace scss {
+
+    }
+
+    namespace workflows {
+
+    }
+
+    ts -> scss : Uses
+
+}
+
+@enduml
