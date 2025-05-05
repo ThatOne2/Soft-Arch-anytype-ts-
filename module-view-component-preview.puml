@@ -1,0 +1,64 @@
+@startuml
+namespace src/ts/component/preview {
+    interface PropsObject {
+        +rootId: string
+        +size: I.PreviewSize
+        +className?: string
+        +onMore(e: any): void
+        +onClick(e: any): void
+        +onContextMenu(e: any): void
+        +onMouseEnter(e: any): void
+        +onMouseLeave(e: any): void
+        +position?: () => void
+        +setObject?: (object: any) => void
+    }
+
+    Class Object {
+        +Colors: array
+        +PreviewObject(): any
+    }
+
+    interface PropsLink {
+        +url: string
+        +position?: () => void
+    }
+    interface Info {
+        +title: string
+        +description: string
+        +imageUrl: string
+    }
+
+    Class Link {
+        +ALLOWED_SCHEME: array
+        +PreviewLink(): any
+    }
+
+    interface PropsDefault {
+        +rootId?: string
+        +object?: any
+        +className?: string
+        +withPlural?: boolean
+        +position?: () => void
+        +setObject?: (object: any) => void
+    }
+
+    Class Default {
+        +PreviewDefault(): any
+    }
+
+    Class Index {
+        +OFFSET_Y: int
+        +BORDER: int
+        +PreviewIndex(): any
+    }
+
+    PropsObject --o Object
+    PropsLink --o Link
+    Info --* Link
+    PropsDefault --o Default
+    Object <-- Index
+    Link <-- Index
+    Default <-- Index
+}
+
+@enduml

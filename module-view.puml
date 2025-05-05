@@ -61,7 +61,23 @@ namespace src {
         namespace store {
 
         }
-        App <- Entry : Starts render
+
+        namespace interface {
+
+        }
+
+        namespace model {
+
+        }
+        
+        Entry --> App : Starts render
+        model -- lib
+        docs --> lib
+        hook -- lib
+        store -- lib
+        interface -- lib
+        component --> lib
+
     }
 
     namespace img {
